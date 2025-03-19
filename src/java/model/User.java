@@ -25,7 +25,11 @@ public class User {
         this.password = password;
         this.role = role;
     }
-
+    public User(String name,String email, String password){
+        this.name = name;
+        this.email = email;
+        this.password = password;
+    }
     // Getters and Setters
     public int getUserID() { return userID; }
     public void setUserID(int userID) { this.userID = userID; }
@@ -46,5 +50,9 @@ public class User {
     public String toString() {
         return "User{" + "userID=" + userID + ", name=" + name + ", email=" + email + ", password=" + password + ", role=" + role + '}';
     }
-    
+    public boolean validate() {
+        // For demonstration purposes, we're using hardcoded credentials
+        // In a real application, this would check against a database
+        return "Jane Smith".equals(name) && "password456".equals(password);
+    }
 }

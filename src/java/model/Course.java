@@ -13,12 +13,31 @@ public class Course {
     private String courseName;
     private String description;
     private int teacherID;
+    private String img;
+    private int categoryID;
+    private String name;
 
     // Constructors
     public Course() {}
 
     public Course(int courseID, String courseName, String description, int teacherID) {
         this.courseID = courseID;
+        this.courseName = courseName;
+        this.description = description;
+        this.teacherID = teacherID;
+    }
+
+    public Course(int courseID, String courseName, String description, int teacherID, String img, int categoryID, String name) {
+        this.courseID = courseID;
+        this.courseName = courseName;
+        this.description = description;
+        this.teacherID = teacherID;
+        this.img = img;
+        this.categoryID = categoryID;
+        this.name = name;
+    }
+    
+    public Course(String courseName, String description, int teacherID) {
         this.courseName = courseName;
         this.description = description;
         this.teacherID = teacherID;
@@ -36,4 +55,27 @@ public class Course {
 
     public int getTeacherID() { return teacherID; }
     public void setTeacherID(int teacherID) { this.teacherID = teacherID; }
+      public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    public int getCategoryID() {
+        return categoryID;
+    }
+
+    public void setCategoryID(int categoryID) {
+        this.categoryID = categoryID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
