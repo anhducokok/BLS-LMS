@@ -17,14 +17,18 @@ public class DBContext {
     public DBContext() {
         try {
             String username = "sa";
-            String password = "11042004@Anhduc";
-            String url = "jdbc:sqlserver://localhost:1433;databaseName=LearningPlatform";
+            String password = "123iloveanime";
+            String url = "jdbc:sqlserver://localhost:1433;databaseName=LearningPlatform1";
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             connection = DriverManager.getConnection(url, username, password);
             System.out.println("Database connection successful!");
         } catch (ClassNotFoundException | SQLException ex) {
             System.out.println("Database connection failed: " + ex);
         }
+    }
+    
+    public Connection getConnection(){
+        return connection;
     }
 
     public static void main(String[] args) {
